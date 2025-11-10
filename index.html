@@ -1,262 +1,246 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Last Call Home Solutions LLC – Invoice Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .header-info, .footer {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .section {
+    margin-bottom: 30px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input, textarea, select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .line-item {
+    border: 1px solid #bbb;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  button {
+    background: #1e73be;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #155b91;
+  }
+  hr {
+    border: 1px solid #ccc;
+    margin: 30px 0;
+  }
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1">&lt;title&gt;Last Call Home Solutions LLC – Invoice Form&lt;/title&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 900px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 40px auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>h1, h2, h3 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.header-info, .footer {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>label {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>input, textarea, select {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.line-item {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid #bbb;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #1e73be;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #155b91;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>hr {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 30px 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- HEADER --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;&lt;b&gt;Last Call Home Solutions LLC&lt;/b&gt;&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Address:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="company_address" value="1234 Example Street, City, State ZIP" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Phone:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="company_phone" value="(555) 123-4567" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Email:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="email" id="company_email" value="info@lastcallhomesolutions.com" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;em&gt;“Last call you’ll make for all your contracting and remodeling needs.”&lt;/em&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- FORM --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;form id="invoiceForm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Header Info --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Invoice Information&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="invoice_date"&gt;Invoice Date:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="date" id="invoice_date" name="invoice_date" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="invoice_number"&gt;Invoice #:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="text" id="invoice_number" name="invoice_number" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Top Info --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Project &amp; Payment Info&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="salesperson"&gt;Salesperson Name:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="text" id="salesperson" name="salesperson" placeholder="Dennis Call" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="job"&gt;Job Name or Address:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="text" id="job" name="job" placeholder="Kitchen Remodel, Tampa FL" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="payment_terms"&gt;&lt;strong&gt;Payment Terms:&lt;/strong&gt;&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="payment_terms" rows="2"&gt;Deposit of 50% prior to work commencing and weekly progress payments.&lt;/textarea&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="approx_weeks"&gt;Approximate Working Weeks:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" id="approx_weeks" name="approx_weeks" min="1" value="4" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Dynamic Line Items --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Line Items&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="num_line_items"&gt;How many line items (trades)?&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" id="num_line_items" min="1" max="20" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button type="button" id="generateBtn"&gt;Generate Line Item Sections&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="lineItemsContainer"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Contingency --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Contingency (10%)&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="contingency_coverage" rows="3"&gt;Miscellaneous material and unforeseen circumstances; screws, nails, latex, interior doorknobs, kitchen handles/doorknobs, stucco repair, shower/tub fixtures, etc.&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;CONTINGENCY FUNDS NOT UTILIZED WILL BE RETURNED TO THE CUSTOMER.&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Totals --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Totals &amp; Payment&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="total_costs"&gt;Total Costs (tax percentage included):&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" step="0.01" id="total_costs" name="total_costs" placeholder="0.00" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="deposit_required"&gt;Deposit Required:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" step="0.01" id="deposit_required" name="deposit_required" placeholder="0.00" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="weekly_payments"&gt;Weekly Progress Payments × ____ (beginning second working week):&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" id="weekly_payments" name="weekly_payments" min="0" placeholder="Enter number of weekly payments" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="final_amount_due"&gt;Final Amount Due Upon Completion:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" step="0.01" id="final_amount_due" name="final_amount_due" placeholder="0.00" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Clause:&lt;/strong&gt; Payment will not exceed amount shown in contract unless all parties agree to addendum.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Customer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Customer Info&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="customer_name"&gt;Customer Name:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="text" id="customer_name" name="customer_name" placeholder="Customer Full Name" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="customer_address"&gt;Customer Address:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="text" id="customer_address" name="customer_address" placeholder="123 Main Street, City, State ZIP" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="customer_phone"&gt;Customer Phone:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="text" id="customer_phone" name="customer_phone" placeholder="(555) 987-6543" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="customer_email"&gt;Customer Email:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="email" id="customer_email" name="customer_email" placeholder="customer@email.com" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;hr /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button type="submit"&gt;Generate My Bid&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const container = document.getElementById("lineItemsContainer");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const generateBtn = document.getElementById("generateBtn");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Generate dynamic line items</p>
-<p class="p1"><span class="Apple-converted-space">    </span>generateBtn.addEventListener("click", () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>container.innerHTML = "";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const count = parseInt(document.getElementById("num_line_items").value);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (!count || count &lt; 1) return alert("Enter a valid number of line items.");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 1; i &lt;= count; i++) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const div = document.createElement("div");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>div.classList.add("line-item");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>div.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;${i} LINE ITEM&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Trade Name:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="text" name="trade_${i}" placeholder="e.g., Plumbing, Drywall" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Scope of Work (one per line):&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;textarea name="scope_${i}" rows="3" placeholder="- Remove existing supply lines&amp;#10;- Install new PEX runs to kitchen and hall bath" required&gt;&lt;/textarea&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Material and Labor Included?&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;select name="mat_labor_${i}"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="Yes"&gt;Yes&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="No"&gt;No&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/select&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Line Total ($):&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="number" step="0.01" name="line_total_${i}" placeholder="0.00" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>container.appendChild(div);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Handle submit</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("invoiceForm").addEventListener("submit", async (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>const numItems = parseInt(document.getElementById("num_line_items").value);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const lineItems = [];</p>
-<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 1; i &lt;= numItems; i++) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const trade = document.querySelector(`[name=trade_${i}]`).value;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const scopeText = document.querySelector(`[name=scope_${i}]`).value;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const scope = scopeText.split(/\r?\n/).filter(Boolean);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const matLabor = document.querySelector(`[name=mat_labor_${i}]`).value;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const lineTotal = parseFloat(document.querySelector(`[name=line_total_${i}]`).value);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>lineItems.push({ trade, scope, material_labor_included: matLabor, line_total: lineTotal });</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>const data = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>company_address: document.getElementById("company_address").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>company_phone: document.getElementById("company_phone").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>company_email: document.getElementById("company_email").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>invoice_date: document.getElementById("invoice_date").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>invoice_number: document.getElementById("invoice_number").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>salesperson: document.getElementById("salesperson").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>job: document.getElementById("job").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>payment_terms: document.getElementById("payment_terms").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>approx_weeks: parseInt(document.getElementById("approx_weeks").value),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>line_items: lineItems,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>contingency_coverage: document.getElementById("contingency_coverage").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>total_costs: parseFloat(document.getElementById("total_costs").value),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>deposit_required: parseFloat(document.getElementById("deposit_required").value),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>weekly_payments: parseInt(document.getElementById("weekly_payments").value),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>final_amount_due: parseFloat(document.getElementById("final_amount_due").value || 0),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>customer_name: document.getElementById("customer_name").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>customer_address: document.getElementById("customer_address").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>customer_phone: document.getElementById("customer_phone").value,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>customer_email: document.getElementById("customer_email").value</p>
-<p class="p1"><span class="Apple-converted-space">      </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>const response = await fetch("YOUR_N8N_WEBHOOK_URL_HERE", {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>method: "POST",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>headers: { "Content-Type": "application/json" },</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body: JSON.stringify(data)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (response.ok) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert("Invoice submitted successfully!");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>e.target.reset();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>container.innerHTML = "";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert("Error submitting invoice. Check webhook URL or console.");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <!-- HEADER -->
+  <h1><b>Last Call Home Solutions LLC</b></h1>
+  <div class="header-info">
+    <label>Address:</label>
+    <input type="text" id="company_address" value="1234 Example Street, City, State ZIP" />
+
+    <label>Phone:</label>
+    <input type="text" id="company_phone" value="(555) 123-4567" />
+
+    <label>Email:</label>
+    <input type="email" id="company_email" value="info@lastcallhomesolutions.com" />
+
+    <p><em>“Last call you’ll make for all your contracting and remodeling needs.”</em></p>
+  </div>
+
+  <!-- FORM -->
+  <form id="invoiceForm">
+    <!-- Header Info -->
+    <div class="section">
+      <h2>Invoice Information</h2>
+      <label for="invoice_date">Invoice Date:</label>
+      <input type="date" id="invoice_date" name="invoice_date" required />
+
+      <label for="invoice_number">Invoice #:</label>
+      <input type="text" id="invoice_number" name="invoice_number" required />
+    </div>
+
+    <!-- Top Info -->
+    <div class="section">
+      <h2>Project & Payment Info</h2>
+      <label for="salesperson">Salesperson Name:</label>
+      <input type="text" id="salesperson" name="salesperson" placeholder="Dennis Call" required />
+
+      <label for="job">Job Name or Address:</label>
+      <input type="text" id="job" name="job" placeholder="Kitchen Remodel, Tampa FL" required />
+
+      <label for="payment_terms"><strong>Payment Terms:</strong></label>
+      <textarea id="payment_terms" rows="2">Deposit of 50% prior to work commencing and weekly progress payments.</textarea>
+
+      <label for="approx_weeks">Approximate Working Weeks:</label>
+      <input type="number" id="approx_weeks" name="approx_weeks" min="1" value="4" required />
+    </div>
+
+    <!-- Dynamic Line Items -->
+    <div class="section">
+      <h2>Line Items</h2>
+      <label for="num_line_items">How many line items (trades)?</label>
+      <input type="number" id="num_line_items" min="1" max="20" required />
+      <button type="button" id="generateBtn">Generate Line Item Sections</button>
+      <div id="lineItemsContainer"></div>
+    </div>
+
+    <!-- Contingency -->
+    <div class="section">
+      <h2>Contingency (10%)</h2>
+      <textarea id="contingency_coverage" rows="3">Miscellaneous material and unforeseen circumstances; screws, nails, latex, interior doorknobs, kitchen handles/doorknobs, stucco repair, shower/tub fixtures, etc.</textarea>
+      <p><strong>CONTINGENCY FUNDS NOT UTILIZED WILL BE RETURNED TO THE CUSTOMER.</strong></p>
+    </div>
+
+    <!-- Totals -->
+    <div class="section">
+      <h2>Totals & Payment</h2>
+      <label for="total_costs">Total Costs (tax percentage included):</label>
+      <input type="number" step="0.01" id="total_costs" name="total_costs" placeholder="0.00" required />
+
+      <label for="deposit_required">Deposit Required:</label>
+      <input type="number" step="0.01" id="deposit_required" name="deposit_required" placeholder="0.00" required />
+
+      <label for="weekly_payments">Weekly Progress Payments × ____ (beginning second working week):</label>
+      <input type="number" id="weekly_payments" name="weekly_payments" min="0" placeholder="Enter number of weekly payments" required />
+
+      <label for="final_amount_due">Final Amount Due Upon Completion:</label>
+      <input type="number" step="0.01" id="final_amount_due" name="final_amount_due" placeholder="0.00" />
+
+      <p><strong>Clause:</strong> Payment will not exceed amount shown in contract unless all parties agree to addendum.</p>
+    </div>
+
+    <!-- Customer -->
+    <div class="section">
+      <h2>Customer Info</h2>
+
+      <label for="customer_name">Customer Name:</label>
+      <input type="text" id="customer_name" name="customer_name" placeholder="Customer Full Name" required />
+
+      <label for="customer_address">Customer Address:</label>
+      <input type="text" id="customer_address" name="customer_address" placeholder="123 Main Street, City, State ZIP" required />
+
+      <label for="customer_phone">Customer Phone:</label>
+      <input type="text" id="customer_phone" name="customer_phone" placeholder="(555) 987-6543" required />
+
+      <label for="customer_email">Customer Email:</label>
+      <input type="email" id="customer_email" name="customer_email" placeholder="customer@email.com" required />
+    </div>
+
+    <hr />
+
+    <button type="submit">Generate My Bid</button>
+  </form>
+
+  <script>
+    const container = document.getElementById("lineItemsContainer");
+    const generateBtn = document.getElementById("generateBtn");
+
+    // Generate dynamic line items
+    generateBtn.addEventListener("click", () => {
+      container.innerHTML = "";
+      const count = parseInt(document.getElementById("num_line_items").value);
+      if (!count || count < 1) return alert("Enter a valid number of line items.");
+
+      for (let i = 1; i <= count; i++) {
+        const div = document.createElement("div");
+        div.classList.add("line-item");
+        div.innerHTML = `
+          <h3>${i} LINE ITEM</h3>
+          <label>Trade Name:</label>
+          <input type="text" name="trade_${i}" placeholder="e.g., Plumbing, Drywall" required />
+
+          <label>Scope of Work (one per line):</label>
+          <textarea name="scope_${i}" rows="3" placeholder="- Remove existing supply lines&#10;- Install new PEX runs to kitchen and hall bath" required></textarea>
+
+          <label>Material and Labor Included?</label>
+          <select name="mat_labor_${i}">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+
+          <label>Line Total ($):</label>
+          <input type="number" step="0.01" name="line_total_${i}" placeholder="0.00" required />
+        `;
+        container.appendChild(div);
+      }
+    });
+
+    // Handle submit
+    document.getElementById("invoiceForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const numItems = parseInt(document.getElementById("num_line_items").value);
+      const lineItems = [];
+      for (let i = 1; i <= numItems; i++) {
+        const trade = document.querySelector(`[name=trade_${i}]`).value;
+        const scopeText = document.querySelector(`[name=scope_${i}]`).value;
+        const scope = scopeText.split(/\r?\n/).filter(Boolean);
+        const matLabor = document.querySelector(`[name=mat_labor_${i}]`).value;
+        const lineTotal = parseFloat(document.querySelector(`[name=line_total_${i}]`).value);
+        lineItems.push({ trade, scope, material_labor_included: matLabor, line_total: lineTotal });
+      }
+
+      const data = {
+        company_address: document.getElementById("company_address").value,
+        company_phone: document.getElementById("company_phone").value,
+        company_email: document.getElementById("company_email").value,
+        invoice_date: document.getElementById("invoice_date").value,
+        invoice_number: document.getElementById("invoice_number").value,
+        salesperson: document.getElementById("salesperson").value,
+        job: document.getElementById("job").value,
+        payment_terms: document.getElementById("payment_terms").value,
+        approx_weeks: parseInt(document.getElementById("approx_weeks").value),
+        line_items: lineItems,
+        contingency_coverage: document.getElementById("contingency_coverage").value,
+        total_costs: parseFloat(document.getElementById("total_costs").value),
+        deposit_required: parseFloat(document.getElementById("deposit_required").value),
+        weekly_payments: parseInt(document.getElementById("weekly_payments").value),
+        final_amount_due: parseFloat(document.getElementById("final_amount_due").value || 0),
+        customer_name: document.getElementById("customer_name").value,
+        customer_address: document.getElementById("customer_address").value,
+        customer_phone: document.getElementById("customer_phone").value,
+        customer_email: document.getElementById("customer_email").value
+      };
+
+      const response = await fetch("YOUR_N8N_WEBHOOK_URL_HERE", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        alert("Invoice submitted successfully!");
+        e.target.reset();
+        container.innerHTML = "";
+      } else {
+        alert("Error submitting invoice. Check webhook URL or console.");
+      }
+    });
+  </script>
 </body>
 </html>
