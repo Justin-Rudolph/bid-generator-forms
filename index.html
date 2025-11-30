@@ -321,10 +321,12 @@
   });
 
   // SUBMIT HANDLER
-  submitBtn.addEventListener("click", async () => {
+  submitBtn.addEventListener("click", async (e) => {
+    e.preventDefault(); // 🔥 prevent page reload on mobile browsers
+  
     const numItems = parseInt(document.getElementById("num_line_items").value);
     const lineItems = [];
-
+  
     for (let i = 1; i <= numItems; i++) {
       const trade = document.querySelector(`[name=trade_${i}]`)?.value;
       const scopeText = document.querySelector(`[name=scope_${i}]`)?.value || "";
@@ -333,7 +335,7 @@
       const lineTotal = parseFloat(document.querySelector(`[name=line_total_${i}]`)?.value || 0);
       lineItems.push({ trade, scope, material_labor_included: matLabor, line_total: lineTotal });
     }
-
+  
     const data = {
       company_address: document.getElementById("company_address").value,
       company_phone: document.getElementById("company_phone").value,
@@ -355,25 +357,29 @@
       customer_phone: document.getElementById("customer_phone").value,
       customer_email: document.getElementById("customer_email").value
     };
-
+  
     try {
       const response = await fetch("https://astutearc7.app.n8n.cloud/webhook/lastcall-bid", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       });
-
+  
       if (response.ok) {
         alert("Bid submitted successfully!");
+  
+        // 🔥 ONLY reset on success
         invoiceForm.reset();
         container.innerHTML = "";
         window.scrollTo({ top: 0, behavior: "smooth" });
+  
       } else {
-        alert("Error submitting bid.");
+        alert("❌ Error submitting bid.\nYour work has been kept — please try again.");
       }
+  
     } catch (err) {
       console.error(err);
-      alert("Network error. Please try again.");
+      alert("⚠️ Network error — nothing was erased.\nTry again once you're connected.");
     }
   });
 </script>
