@@ -205,17 +205,18 @@
     <p><strong>CONTINGENCY FUNDS NOT UTILIZED WILL BE RETURNED TO THE CUSTOMER.</strong></p>
 
     <h2>Totals & Payment</h2>
+
     <label for="total_costs">Total Costs (tax percentage included):</label>
-    <input type="number" step="0.01" id="total_costs" value="18750.00" required />
+    <input type="text" id="total_costs" class="money-input" value="$18750" required />
 
     <label for="deposit_required">Deposit Required:</label>
-    <input type="number" step="0.01" id="deposit_required" value="9375.00" required />
+    <input type="text" id="deposit_required" class="money-input" value="$9375" required />
 
     <label for="weekly_payments">Weekly Progress Payments × ____ (beginning second working week):</label>
     <input type="number" id="weekly_payments" value="4" required />
 
     <label for="final_amount_due">Final Amount Due Upon Completion:</label>
-    <input type="number" step="0.01" id="final_amount_due" value="1875.00" />
+    <input type="text" id="final_amount_due" class="money-input" value="$1875" />
 
     <h2>Customer Info</h2>
     <label for="customer_name">Customer Name:</label>
@@ -278,57 +279,73 @@
         </select>
 
         <label>Line Total ($):</label>
-        <input type="number" step="0.01" name="line_total_${i}" value="${i === 1 ? "5400.00" : "6800.00"}" required />
+        <input type="text" name="line_total_${i}" class="money-input" value="${i === 1 ? "$5400" : "$6800"}" required />
       `;
 
       container.appendChild(div);
     }
   });
 
-  document.addEventListener("keydown", function(e) {
-    if (e.target && e.target.classList.contains("scope-input")) {
-      if (e.key === "Enter") {
-        e.preventDefault();
+  /* -----------------------------
+     MONEY INPUT AUTO-FORMATTING
+  ------------------------------*/
+  function formatMoneyDisplay(el) {
+    let raw = el.value.replace(/[^0-9.]/g, "");
 
-        const cursorPos = e.target.selectionStart;
-        const text = e.target.value;
-        const before = text.substring(0, cursorPos);
-        const after = text.substring(cursorPos);
-        const newValue = before + "\n- " + after;
-
-        e.target.value = newValue;
-        e.target.selectionStart = cursorPos + 3;
-        e.target.selectionEnd = cursorPos + 3;
-      }
+    if (raw === "") {
+      el.value = "";
+      return;
     }
-  });
 
-  document.addEventListener("input", function(e) {
-    if (e.target && e.target.classList.contains("scope-input")) {
-      if (e.target.value.length === 1 && e.target.value !== "-") {
-        e.target.value = "- ";
-      }
+    const hasDecimals = raw.includes(".");
+    let num = parseFloat(raw);
+    if (isNaN(num)) num = 0;
+
+    if (hasDecimals) {
+      el.value = "$" + num.toString();
+    } else {
+      el.value = "$" + Math.round(num);
     }
-  });
+  }
 
+  document.addEventListener("blur", function (e) {
+    if (e.target.classList.contains("money-input")) {
+      formatMoneyDisplay(e.target);
+    }
+  }, true);
+
+  function moneyToNumber(v) {
+    if (!v) return 0;
+    return parseFloat(v.replace(/[^0-9.]/g, "")) || 0;
+  }
+
+  /* -----------------------------
+      SUBMIT HANDLER
+  ------------------------------*/
   submitBtn.addEventListener("click", async (e) => {
-    e.preventDefault();
-  
+    e.preventDefault(); 
+
     const numItems = parseInt(document.getElementById("num_line_items").value);
     const lineItems = [];
-  
+
     for (let i = 1; i <= numItems; i++) {
       const trade = document.querySelector(`[name=trade_${i}]`)?.value;
       const scopeText = document.querySelector(`[name=scope_${i}]`)?.value || "";
       const scope = scopeText.split(/\r?\n/).filter(Boolean);
       const matLabor = document.querySelector(`[name=mat_labor_${i}]`)?.value || "Yes";
-      const lineTotal = parseFloat(document.querySelector(`[name=line_total_${i}]`)?.value || 0);
-      lineItems.push({ trade, scope, material_labor_included: matLabor, line_total: lineTotal });
+      const lineTotal = moneyToNumber(document.querySelector(`[name=line_total_${i}]`)?.value);
+
+      lineItems.push({ 
+        trade, 
+        scope, 
+        material_labor_included: matLabor, 
+        line_total: lineTotal 
+      });
     }
-  
+
     const data = {
       company_address: document.getElementById("company_address").value,
-      company_phone: document.getElementById("company_company").value,
+      company_phone: document.getElementById("company_phone").value,
       company_email: document.getElementById("company_email").value,
       invoice_date: document.getElementById("invoice_date").value,
       invoice_number: document.getElementById("invoice_number").value,
@@ -338,23 +355,23 @@
       approx_weeks: parseInt(document.getElementById("approx_weeks").value),
       line_items: lineItems,
       contingency_coverage: document.getElementById("contingency_coverage").value,
-      total_costs: parseFloat(document.getElementById("total_costs").value),
-      deposit_required: parseFloat(document.getElementById("deposit_required").value),
+      total_costs: moneyToNumber(document.getElementById("total_costs").value),
+      deposit_required: moneyToNumber(document.getElementById("deposit_required").value),
       weekly_payments: parseInt(document.getElementById("weekly_payments").value),
-      final_amount_due: parseFloat(document.getElementById("final_amount_due").value || 0),
+      final_amount_due: moneyToNumber(document.getElementById("final_amount_due").value),
       customer_name: document.getElementById("customer_name").value,
       customer_address: document.getElementById("customer_address").value,
       customer_phone: document.getElementById("customer_phone").value,
       customer_email: document.getElementById("customer_email").value
     };
-  
+
     try {
       const response = await fetch("https://astutearc7.app.n8n.cloud/webhook/lastcall-bid", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       });
-  
+
       if (response.ok) {
         alert("Bid submitted successfully!");
         invoiceForm.reset();
@@ -363,7 +380,7 @@
       } else {
         alert("❌ Error submitting bid.\nYour work has been kept — please try again.");
       }
-  
+
     } catch (err) {
       console.error(err);
       alert("⚠️ Network error — nothing was erased.\nTry again once you're connected.");
